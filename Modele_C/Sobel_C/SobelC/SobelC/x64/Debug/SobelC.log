@@ -1,0 +1,27 @@
+﻿  lodepng.cpp
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(712): warning C4334: '<<' : résultat du décalage 32 bits converti implicitement en 64 bits (le décalage 64 bits est-il intentionnel ?)
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(730): warning C4267: '=' : conversion de 'size_t' en 'unsigned short', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(731): warning C4334: '<<' : résultat du décalage 32 bits converti implicitement en 64 bits (le décalage 64 bits est-il intentionnel ?)
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(754): warning C4267: '=' : conversion de 'size_t' en 'unsigned short', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(771): warning C4267: '=' : conversion de 'size_t' en 'unsigned short', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(3728): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4698): warning C4267: '=' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4920): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4925): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4926): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4927): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4928): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4929): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4930): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(4931): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5122): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5146): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5180): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5197): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5219): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5250): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5363): warning C4267: 'argument' : conversion de 'size_t' en 'unsigned int', perte possible de données
+c:\users\temp\documents\a4-tp2_cpu_fpga_opencl\modele_c\sobel_c\lodepng.cpp(5441): warning C4334: '<<' : résultat du décalage 32 bits converti implicitement en 64 bits (le décalage 64 bits est-il intentionnel ?)
+  main.cpp
+  Génération de code en cours...
+  SobelC.vcxproj -> C:\Users\TEMP\Documents\A4-TP2_CPU_FPGA_OpenCL\Modele_C\Sobel_C\SobelC\x64\Debug\SobelC.exe

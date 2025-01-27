@@ -26,6 +26,7 @@
     <ClInclude Include="..\..\chrono.h" />
     <ClInclude Include="..\..\lodepng.h" />
     <ClInclude Include="..\..\readpng.h" />
+    <ClInclude Include="..\..\tpA4.h" />
     <ClInclude Include="..\..\tpc4.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

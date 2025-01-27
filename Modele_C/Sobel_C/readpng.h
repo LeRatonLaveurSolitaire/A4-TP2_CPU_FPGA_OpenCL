@@ -1,4 +1,4 @@
-#include "tpc4.h"
+#include "tpA4.h"
 
 struct struct_file
 {
@@ -69,7 +69,7 @@ struct_file decodeTwoSteps(const char* filename) {
 
   /********/
 
-  printf("Taille de l'image: [%d/%d]\n",width,height);
+  printf("%d %d ",width,height);
 
   unsigned int* tmp = 0;
 
@@ -88,6 +88,7 @@ struct_file decodeTwoSteps(const char* filename) {
 	  tmp = filter_sobel(tmp,width,height); 
 	  /*************************************************************************/
 	  sum+=c.GetDelayUs();
+	  printf("%d \n", sum);
   }
 
   /*******************/
