@@ -1,0 +1,155 @@
+<KERNEL_LIST>
+	<PROGRAM_GLOBAL_MEM_SIZE value="0" />
+	<KERNEL_BUNDLE name="gradient" compute_units="1">
+	<KERNEL name="gradient" filename="kernel_hdl/gradient/gradient_function_wrapper.vhd" version="1" cosim_name="gradient" enable_global_profiling="1" workgroup_invariant="1" has_global_atomics="0" num_vector_lanes="1" num_profiling_signals="0" arbitration_latency="5" kernel_side_mem_latency="8">
+		<RESOURCE_INFO>
+			<ID value="0" />
+			<AGGREGATE_STATIC_LOCAL_MEM_SIZE value="0" />
+			<MAX_WORK_GROUP_SIZE value="1" />
+			<REQUIRED_WORK_GROUP_SIZE x="1" y="1" z="1" />
+		</RESOURCE_INFO>
+		<CONFIGURATION>
+			<INTERFACE port="clock_reset" type="clock"/>
+			<INTERFACE port="cra_irq" type="irq"/>
+			<INTERFACE port="cra" type="slave" cosim_name="" width="64" size="128" latency="0" />
+		</CONFIGURATION>
+		<REQUIREMENTS>
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library_package.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/windows64/lib/dspba/Libraries/vhdl/base/dspba_library.vhd" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_data_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_ll_ram_fifo.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_valid_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_staging_reg.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/hld_fifo_zero_width.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_high_speed_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_low_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_zero_latency_fifo.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fanout_pipeline.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_std_synchronizer_nocut.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_decr_threshold.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_tessellated_incr_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_reset_handler.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_lfsr.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pop.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_pipeline.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_push.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_dspba_buffer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_token_fifo_counter.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_full_detector.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_top.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_permute_address.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_pipelined.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_enabled.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_basic_coalescer.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_simple.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_master.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_bursting_load_stores.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_non_aligned_write.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_read_cache.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_atomic.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_prefetch_block.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_wide_wrapper.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_streaming_prefetch.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_aligned_burst_coalesced_lsu.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_toggle_detect.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_debug_mem.v" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_write.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/lsu_burst_coalesced_pipelined_read.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_fifo_stall_valid_lookahead.sv" />
+			<FILE name="$::env(INTELFPGAOCLSDKROOT)/ip/acl_clock2x_holder.v" />
+			<FILE name="kernel_hdl/gradient/gradient_function_wrapper.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_function.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B1_sr_1.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B2_sr_0.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B0.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B0_stall_region.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B0_merge_reg.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i1_throttle_pop_gradient0.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i1_throttle_pop_gradient_reg.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B0_branch.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B0_merge.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B1.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B1_stall_region.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B1_merge_reg.vhd" />
+			<FILE name="kernel_hdl/gradient/i_sfc_c0_for_cond_preheader_gradient_c0_enter_gradient.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c0_for_cond_preheader_graA0Z_exit_gradient47.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c0_for_cond_preheader_graA0Zent181_data_fifo.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c0_for_cond_preheader_graA0Znt_full_detector.vhd" />
+			<FILE name="kernel_hdl/gradient/i_sfc_logic_c0_for_cond_preheader_gradieA0Z_enter_gradient2.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pipeline_keep_going_gradient11.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i10_coalesce_counter_pop13_gradient4.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_count_08_pop10_gradient24.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i4_cleanups_pop12_gradient7.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i4_initerations_pop11_gradient15.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i10_coalesce_counter_push13_gradient13.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i1_lastiniteration_gradient22.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i1_notexitcond_gradient42.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_count_08_push10_gradient36.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i4_cleanups_push12_gradient45.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i4_initerations_push11_gradient18.vhd" />
+			<FILE name="kernel_hdl/gradient/i_syncbuf_frame_in_sync_buffer_gradient27.vhd" />
+			<FILE name="kernel_hdl/gradient/i_syncbuf_frame_out_sync_buffer_gradient33.vhd" />
+			<FILE name="kernel_hdl/gradient/i_syncbuf_iterations_sync_buffer993_gradient30.vhd" />
+			<FILE name="kernel_hdl/gradient/i_syncbuf_iterations_sync_buffer_gradient38.vhd" />
+			<FILE name="kernel_hdl/gradient/i_sfc_c1_for_cond_preheader_gradient_c1_enter_gradient.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c1_for_cond_preheader_graA0Zexit_gradient176.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c1_for_cond_preheader_graA0Zent183_data_fifo.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_sfc_exit_c1_for_cond_preheader_graA0Znt_full_detector.vhd" />
+			<FILE name="kernel_hdl/gradient/i_sfc_logic_c1_for_cond_preheader_gradieA0Zenter_gradient50.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_coalesced_pop3_gradient59.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_pop9_gradient131.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_rows_0_0_pop8_gradient65.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_rows_1_0_pop7_gradient55.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_rows_297_0_coalesced_pop4_gradient53.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_rows_298_0_pop6_gradient69.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pop_i32_rows_299_0_pop5_gradient61.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_coalesced_push3_gradient63.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_push9_gradient133.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_rows_0_0_push8_gradient75.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_rows_1_0_push7_gradient67.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_rows_297_0_coalesced_push4_gradient57.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_rows_298_0_push6_gradient71.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i32_rows_299_0_push5_gradient73.vhd" />
+			<FILE name="kernel_hdl/gradient/i_load_unnamed_gradient0_gradient48.vhd" />
+			<FILE name="kernel_hdl/gradient/readdata_reg_unnamed_gradient0_gradient0.vhd" />
+			<FILE name="kernel_hdl/gradient/i_store_unnamed_gradient1_gradient177.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B1_branch.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B1_merge.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B2.vhd" />
+			<FILE name="kernel_hdl/gradient/bb_gradient_B2_stall_region.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i1_throttle_push_gradient179.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_push_i1_throttle_push_gradient_reg.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B2_branch.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_B2_merge.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pipeline_keep_going_gradient_sr.vhd" />
+			<FILE name="kernel_hdl/gradient/i_acl_pipeline_keep_going_gradient_valid_fifo.vhd" />
+			<FILE name="kernel_hdl/gradient/gradient_function_cra_slave.vhd" />
+		</REQUIREMENTS>
+		<DATA>
+			<INTERFACE port="unnamed_gradient0" cosim_name="" type="master" width="256" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="read" criticality="1048576" buffer_location="" group_id="0" />
+			<INTERFACE port="unnamed_gradient1" cosim_name="" type="master" width="256" true_lsu_width="32" burstwidth="5" pipelined="true" addr_space="__global" aspace_id="1" optype="write" criticality="1048576" buffer_location="" group_id="0" />
+		</DATA>
+		<KERNEL_ARGS>
+			<ARGUMENT name="frame_in" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="R" access_qualifier="ARG_ACCESS_NONE" type_name="uint*" >
+		</ARGUMENT>
+			<ARGUMENT name="frame_out" cosim_name="" opencl_access_type="ACL_ARG_ADDR_GLOBAL" opencl_type_category="ACL_ARG_MEM_OBJ" size="8" type_qualifier="R" access_qualifier="ARG_ACCESS_NONE" type_name="uint*" >
+		</ARGUMENT>
+			<ARGUMENT name="iterations" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="int" >
+		</ARGUMENT>
+			<ARGUMENT name="threshold" cosim_name="" opencl_access_type="ACL_ARG_ADDR_NONE" opencl_type_category="ACL_ARG_BY_VALUE" size="4" type_qualifier="ARG_TYPE_NONE" access_qualifier="ARG_ACCESS_NONE" type_name="uint" >
+		</ARGUMENT>
+		</KERNEL_ARGS>
+		<PRINTF_FORMAT_STRINGS>
+		</PRINTF_FORMAT_STRINGS>
+		<PRINTF_INTERFACES>
+		</PRINTF_INTERFACES>
+	</KERNEL>
+	</KERNEL_BUNDLE>
+	<STRUCT_TYPE_DEFS>
+	</STRUCT_TYPE_DEFS>
+</KERNEL_LIST>

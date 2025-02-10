@@ -1,0 +1,851 @@
+{
+  "columns":
+  ["", "ALUTs", "FFs", "RAMs", "DSPs", "Details"]
+  , "debug_enabled":"true"
+  , "type":"module"
+  , "total_percent":
+  [16.1193, 9.86566, 7.10218, 10.3113, 0]
+  , "total":
+  [10810, 15564, 53, 0]
+  , "name":"Kernel System"
+  , "max_resources":
+  [109572, 219144, 514, 112]
+  , "children":
+  [
+    {
+      "name":"Board interface"
+      , "type":"resource"
+      , "data":
+      [2160, 1908, 20, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Platform interface logic."
+        }
+      ]
+    }
+    , {
+      "name":"Global interconnect"
+      , "type":"resource"
+      , "data":
+      [3566, 7148, 0, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Global interconnect for 1 global load and 1 global store."
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Global Memory Interconnect"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#hnj1476724450050"
+            }
+          ]
+        }
+      ]
+    }
+    , {
+      "name":"gradient"
+      , "compute_units":1
+      , "type":"function"
+      , "total_percent":
+      [7.17348, 4.63987, 2.96974, 6.42023, 0]
+      , "total_kernel_resources":
+      [5084, 6508, 33, 0]
+      , "details":
+      [
+        {
+          "type":"text"
+          , "text":"Number of compute units: 1"
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"Function overhead"
+          , "type":"resource"
+          , "data":
+          [1574, 1505, 0, 0]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Kernel dispatch logic."
+            }
+          ]
+        }
+        , {
+          "name":"Coalesced Private Variables: \n - 'rows' (gradient.cl:16)\n - 'pixel' (gradient.cl:39)"
+          , "type":"resource"
+          , "data":
+          [28, 388, 2, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                , "line":16
+              }
+            ]
+            , [
+              {
+                "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                , "line":39
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Shift Register (6 or fewer tap points)"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 10 and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"3 registers of width 32 and depth 1"
+            }
+            , {
+              "type":"text"
+              , "text":"2 registers of width 32 and depth 296"
+            }
+          ]
+        }
+        , {
+          "name":"Private Variable: \n - 'count' (gradient.cl:19)"
+          , "type":"resource"
+          , "data":
+          [24, 101, 0, 0]
+          , "debug":
+          [
+            [
+              {
+                "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                , "line":19
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"text"
+              , "text":"Type: Register"
+            }
+            , {
+              "type":"text"
+              , "text":"1 register of width 32 and depth 1"
+            }
+          ]
+        }
+        , {
+          "name":"gradient.B0"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [5, 2, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [5, 2, 0, 0]
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gradient.B1"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"State"
+              , "type":"resource"
+              , "data":
+              [621, 1218, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for live values and control logic. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce size of local variables"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce scope of local variables, localizing them as much as possible"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"reduce number of nested loops"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [621, 1218, 0, 0]
+                }
+              ]
+            }
+            , {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [152, 616, 2, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"gradient.cl:16"
+                  , "type":"resource"
+                  , "data":
+                  [28, 154, 0.666667, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":16
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:19"
+                  , "type":"resource"
+                  , "data":
+                  [0.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":19
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:20"
+                  , "type":"resource"
+                  , "data":
+                  [27, 23, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":20
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:26"
+                  , "type":"resource"
+                  , "data":
+                  [24.5, 136, 0.666667, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":26
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:28"
+                  , "type":"resource"
+                  , "data":
+                  [35.5, 190, 0.666667, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":28
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:61"
+                  , "type":"resource"
+                  , "data":
+                  [24.5, 101, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                }
+                , {
+                  "name":"gradient.cl:62"
+                  , "type":"resource"
+                  , "data":
+                  [12, 12, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+            , {
+              "name":"Cluster logic"
+              , "type":"resource"
+              , "data":
+              [409, 155, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Logic required to efficiently support sets of operations that do not stall. This area cannot be affected directly."
+                }
+              ]
+            }
+            , {
+              "name":"Computation"
+              , "type":"resource"
+              , "children":
+              [
+                {
+                  "name":"gradient.cl:16"
+                  , "type":"resource"
+                  , "data":
+                  [9, 0.333333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":16
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"10-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.66667, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.33333, 0.333333, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:20"
+                  , "type":"resource"
+                  , "data":
+                  [23.5, 2, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":20
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":4
+                      , "data":
+                      [23, 2, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:26"
+                  , "type":"resource"
+                  , "data":
+                  [9, 0.333333, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":26
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"10-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.66667, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [4.33333, 0.333333, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:28"
+                  , "type":"resource"
+                  , "data":
+                  [378, 332.333, 13, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":28
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"10-bit Integer Subtract"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [3.66667, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [39.3333, 1.33333, 0, 0]
+                    }
+                    , {
+                      "name":"Load"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [318, 331, 13, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Load uses a Prefetching LSU"
+                        }
+                      ]
+                    }
+                    , {
+                      "name":"Select"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [16, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Xor"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:40"
+                  , "type":"resource"
+                  , "data":
+                  [82.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":40
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":5
+                      , "data":
+                      [82.5, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:41"
+                  , "type":"resource"
+                  , "data":
+                  [82.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":41
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":5
+                      , "data":
+                      [82.5, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:42"
+                  , "type":"resource"
+                  , "data":
+                  [165, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":42
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":10
+                      , "data":
+                      [165, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:47"
+                  , "type":"resource"
+                  , "data":
+                  [825, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":47
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":35
+                      , "data":
+                      [825, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:48"
+                  , "type":"resource"
+                  , "data":
+                  [137.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":48
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":6
+                      , "data":
+                      [137.5, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:51"
+                  , "type":"resource"
+                  , "data":
+                  [133.5, 52, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":51
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [38.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"32-bit Integer Multiply"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [95, 52, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:59"
+                  , "type":"resource"
+                  , "data":
+                  [388, 2128, 16, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":59
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [22, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Store"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [366, 2128, 16, 0]
+                      , "details":
+                      [
+                        {
+                          "type":"text"
+                          , "text":"Store uses a Burst-coalesced LSU"
+                        }
+                      ]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:61"
+                  , "type":"resource"
+                  , "data":
+                  [33, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":61
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"32-bit Integer Add"
+                      , "type":"resource"
+                      , "count":1
+                      , "data":
+                      [33, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+                , {
+                  "name":"gradient.cl:62"
+                  , "type":"resource"
+                  , "data":
+                  [1.5, 0, 0, 0]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":62
+                      }
+                    ]
+                  ]
+                  , "children":
+                  [
+                    {
+                      "name":"And"
+                      , "type":"resource"
+                      , "count":3
+                      , "data":
+                      [0.5, 0, 0, 0]
+                    }
+                    , {
+                      "name":"Integer Compare"
+                      , "type":"resource"
+                      , "count":2
+                      , "data":
+                      [1, 0, 0, 0]
+                    }
+                  ]
+                  , "replace_name":"true"
+                }
+              ]
+            }
+          ]
+        }
+        , {
+          "name":"gradient.B2"
+          , "type":"basicblock"
+          , "children":
+          [
+            {
+              "name":"Feedback"
+              , "type":"resource"
+              , "data":
+              [3, 8, 0, 0]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Resources for loop-carried dependencies. To reduce this area:"
+                  , "details":
+                  [
+                    {
+                      "type":"text"
+                      , "text":"reduce number and size of loop-carried variables"
+                    }
+                  ]
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"No Source Line"
+                  , "type":"resource"
+                  , "data":
+                  [3, 8, 0, 0]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

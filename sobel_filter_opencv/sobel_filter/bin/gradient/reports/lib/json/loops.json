@@ -1,0 +1,195 @@
+{
+  "columns":
+  ["", "Pipelined", "II", "Bottleneck", "Details"]
+  , "children":
+  [
+    {
+      "name":"Kernel: gradient"
+      , "data":
+      ["", "", ""]
+      , "debug":
+      [
+        [
+          {
+            "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+            , "line":10
+          }
+        ]
+      ]
+      , "details":
+      [
+        {
+          "type":"brief"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"Single work-item execution"
+        }
+        , {
+          "type":"text"
+          , "text":"See %L for more information"
+          , "links":
+          [
+            {
+              "guide":"Best Practices Guide : Kernels"
+              , "link":"https://www.altera.com/documentation/mwh1391807516407.html#ipp1476408832230"
+            }
+          ]
+        }
+      ]
+      , "children":
+      [
+        {
+          "name":"gradient.B1"
+          , "data":
+          ["Yes", "~1", "n/a"]
+          , "debug":
+          [
+            [
+              {
+                "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                , "line":20
+              }
+            ]
+            , [
+              {
+                "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                , "line":62
+              }
+            ]
+          ]
+          , "details":
+          [
+            {
+              "type":"brief"
+              , "text":"II is an approximation."
+            }
+            , {
+              "type":"text"
+              , "text":"II is an approximation due to the following stallable instructions:"
+              , "links":
+              [
+                {
+                  "view":"Verification statistics"
+                }
+              ]
+              , "details":
+              [
+                {
+                  "type":"text"
+                  , "text":"Load Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                      , "line":"28"
+                    }
+                  ]
+                }
+                , {
+                  "type":"text"
+                  , "text":"Store Operation (%L)"
+                  , "links":
+                  [
+                    {
+                      "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                      , "line":"59"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+          , "children":
+          [
+            {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                    , "line":25
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+              ]
+            }
+            , {
+              "name":"Fully unrolled loop"
+              , "data":
+              ["n/a", "n/a", "n/a"]
+              , "debug":
+              [
+                [
+                  {
+                    "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                    , "line":36
+                  }
+                ]
+              ]
+              , "details":
+              [
+                {
+                  "type":"brief"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+                , {
+                  "type":"text"
+                  , "text":"Unrolled by #pragma unroll"
+                }
+              ]
+              , "children":
+              [
+                {
+                  "name":"Fully unrolled loop"
+                  , "data":
+                  ["n/a", "n/a", "n/a"]
+                  , "debug":
+                  [
+                    [
+                      {
+                        "filename":"c:/Users/TEMP/Documents/TP2_A4/A4-TP2_CPU_FPGA_OpenCL/sobel_filter_opencv/sobel_filter/device/gradient.cl"
+                        , "line":38
+                      }
+                    ]
+                  ]
+                  , "details":
+                  [
+                    {
+                      "type":"brief"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                    , {
+                      "type":"text"
+                      , "text":"Unrolled by #pragma unroll"
+                    }
+                  ]
+                  , "children":
+                  [
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
